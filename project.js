@@ -6,6 +6,9 @@ const deposit = () => {
 
   if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
   }
+  const function name(params) {
+    
+  }
 };
 
 deposit();
