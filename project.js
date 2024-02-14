@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
+/* size */
 const ROWS = 3;
-
 const COLS = 3;
 
 const deposit = () => {
@@ -16,6 +16,7 @@ const deposit = () => {
     }
   }
 };
+
 const getNumberOfLines = () => {
   while (true) {
     const lines = prompt("Enter number of lines to bet on (1-3)");
