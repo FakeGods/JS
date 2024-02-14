@@ -101,7 +101,7 @@ const printRows = (rows) => {
 };
 
 const getWinnings = (rows, bet, lines) => {
-  let winning = 0;
+  let winnings = 0;
 
   for (let row = 0; row < lines; row++) {
     const symbols = rows[row];
@@ -113,7 +113,11 @@ const getWinnings = (rows, bet, lines) => {
         break;
       }
     }
+    if (allSame) {
+      winnings += bet * SYMBOLS_VALUES[symbols[0]];
+    }
   }
+  return winnings;
 };
 
 let balance = deposit();
@@ -122,4 +126,5 @@ const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
 const reels = spin();
 const rows = transpose(reels);
+const winnings = getWinnings(row, lines, bet);
 printRows(rows);
