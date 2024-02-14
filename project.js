@@ -22,6 +22,7 @@ const deposit = () => {
   while (true) {
     const depositAmount = prompt("Enter a deposit amount: ");
     const numberDepositAmount = parseFloat(depositAmount);
+
     if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
       console.log("Invalid deposit amount, try again.");
     } else {
@@ -124,7 +125,6 @@ const game = () => {
   let balance = deposit();
 
   while (true) {
-    const depositAmount = deposit();
     console.log("You have a balance of $" + balance);
     const numberOfLines = getNumberOfLines();
     const bet = getBet(balance, numberOfLines);
