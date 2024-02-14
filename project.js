@@ -22,7 +22,6 @@ const deposit = () => {
   while (true) {
     const depositAmount = prompt("Enter a deposit amount: ");
     const numberDepositAmount = parseFloat(depositAmount);
-
     if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
       console.log("Invalid deposit amount, try again.");
     } else {
@@ -54,9 +53,18 @@ const getBet = (balance, lines) => {
     }
   }
 };
+const spin = () => {
+  const symbols = [];
+  for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
+    for (let i = 0; i < count; i++) {
+      symbols.push(symbol);
+    }
+    console.log(symbols);
+  }
+};
 
+spin();
 let balance = deposit();
-
 const depositAmount = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
