@@ -3,7 +3,21 @@ const prompt = require("prompt-sync")();
 /* size */
 const ROWS = 3;
 const COLS = 3;
+/* symbols */
+const SYMBOLS_COUNT = {
+  A: 3,
+  B: 4,
+  C: 6,
+  D: 8,
+};
+const SYMBOLS_VALUES = {
+  A: 5,
+  B: 3,
+  C: 2,
+  D: 1,
+};
 
+/* main */
 const deposit = () => {
   while (true) {
     const depositAmount = prompt("Enter a deposit amount: ");
@@ -16,7 +30,6 @@ const deposit = () => {
     }
   }
 };
-
 const getNumberOfLines = () => {
   while (true) {
     const lines = prompt("Enter number of lines to bet on (1-3)");
@@ -29,7 +42,6 @@ const getNumberOfLines = () => {
     }
   }
 };
-
 const getBet = (balance, lines) => {
   while (true) {
     const bet = prompt("Enter the bet per line: ");
