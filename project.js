@@ -12,9 +12,9 @@ const SYMBOLS_COUNT = {
 };
 const SYMBOLS_VALUES = {
   A: 5,
-  B: 3,
-  C: 2,
-  D: 1,
+  B: 4,
+  C: 3,
+  D: 2,
 };
 
 /* main */
